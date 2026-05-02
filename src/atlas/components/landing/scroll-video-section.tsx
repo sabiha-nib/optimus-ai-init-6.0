@@ -24,7 +24,7 @@ export function ScrollVideoSection({
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [progress, setProgress] = useState(0);
-  const [ready, setReady] = useState(false);
+  
   const durationRef = useRef(0);
   const lastTimeRef = useRef(-1);
 
@@ -37,7 +37,6 @@ export function ScrollVideoSection({
 
     const onReady = () => {
       durationRef.current = v.duration || 0;
-      setReady(true);
     };
 
     if (v.readyState >= 2 && v.duration) onReady();
