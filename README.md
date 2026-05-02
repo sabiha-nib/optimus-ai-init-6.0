@@ -110,8 +110,3 @@ pnpm dev
 pnpm build
 ```
 
----
-
-## Notes
-
-This project is a design exploration and user experience showcase. It demonstrates various UI patterns, animation techniques, and visual design approaches without any commercial functionality.
