@@ -1,4 +1,4 @@
-# Perfect Merge
+# Optimus - Guide to Artificial Intelligence
 
 A user experience showcase featuring three distinct visual experiences built with React, Vite, and Tailwind CSS.
 
