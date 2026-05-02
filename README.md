@@ -6,7 +6,7 @@ A user experience showcase featuring three distinct visual experiences built wit
 
 ## Overview
 
-This project is a collection of experimental UI designs exploring modern web interactions, scroll-driven animations, and immersive visual storytelling. Each page demonstrates different approaches to user experience design.
+This project is a collection of experimental UI designs exploring modern web interactions, scroll-driven animations, and immersive visual storytelling. Each page demonstrates different approaches to user experience design. This website represents a full research scientific-article on Artificial Intelligence (AI) and its in-depth details. With 3 immersive pages, you will be able to find a full-functional detailed experience on Artificial Intelligence.
 
 ---
 
