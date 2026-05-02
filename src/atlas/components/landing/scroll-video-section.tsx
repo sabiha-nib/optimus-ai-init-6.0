@@ -172,11 +172,7 @@ export function ScrollVideoSection({
           <div className="h-full bg-white/60 transition-[width] duration-100" style={{ width: `${progress * 100}%` }} />
         </div>
 
-        {!ready && (
-          <div className="pointer-events-none absolute bottom-12 right-6 lg:right-16 font-mono text-[10px] tracking-[0.3em] uppercase text-white/40">
-            Buffering…
-          </div>
-        )}
+
       </div>
     </div>
   );

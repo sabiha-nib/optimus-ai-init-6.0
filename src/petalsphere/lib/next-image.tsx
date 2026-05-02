@@ -32,8 +32,8 @@ export const NextImage = React.forwardRef<HTMLImageElement, NextImageProps>(func
       alt={alt}
       width={fill ? undefined : (width as any)}
       height={fill ? undefined : (height as any)}
-      loading={_p ? "eager" : "lazy"}
-      decoding="async"
+      loading="eager"
+      decoding="sync"
       style={fillStyle}
       className={className}
       {...rest}

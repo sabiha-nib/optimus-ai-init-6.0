@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./petalsphere.css";
 import { OptimusNav } from "@/components/OptimusNav";
 import PetalPage from "./PetalPage";
 
 export default function PetalSpherePage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="theme-petalsphere min-h-screen">
       <OptimusNav variant="light" />

@@ -173,11 +173,7 @@ export function ScrollVideoHero() {
           <span className="animate-bounce">↓</span>
         </div>
 
-        {!ready && (
-          <div className="pointer-events-none absolute bottom-12 right-6 lg:right-16 z-10 font-mono text-[10px] tracking-[0.3em] uppercase text-white/40">
-            Buffering…
-          </div>
-        )}
+
       </div>
     </div>
   );
