@@ -1,0 +1,50 @@
+/* ===================================================================== */
+/*  Atlas — Dark, Apple-style research page for Optimus                   */
+/*  All tokens scoped to .theme-atlas so they don't leak globally.        */
+/* ===================================================================== */
+.theme-atlas {
+  --background: 0 0% 2%;
+  --foreground: 0 0% 95%;
+  --card: 0 0% 4%;
+  --card-foreground: 0 0% 95%;
+  --popover: 0 0% 4%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 0 0% 95%;
+  --primary-foreground: 0 0% 4%;
+  --secondary: 0 0% 10%;
+  --secondary-foreground: 0 0% 95%;
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 55%;
+  --accent: 0 0% 12%;
+  --accent-foreground: 0 0% 95%;
+  --destructive: 0 75% 55%;
+  --destructive-foreground: 0 0% 95%;
+  --border: 0 0% 14%;
+  --input: 0 0% 14%;
+  --ring: 0 0% 30%;
+  --radius: 0.625rem;
+
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: "Inter", "Instrument Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography utilities */
+.theme-atlas .font-display {
+  font-family: "Inter", "Instrument Sans", system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+.theme-atlas .font-mono {
+  font-family: "JetBrains Mono", "Courier Prime", monospace;
+}
+
+/* Smooth scroll */
+.theme-atlas { scroll-behavior: smooth; }
+
+/* Custom scrollbar */
+.theme-atlas ::-webkit-scrollbar { width: 6px; }
+.theme-atlas ::-webkit-scrollbar-track { background: hsl(0 0% 2%); }
+.theme-atlas ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+.theme-atlas ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
