@@ -40,11 +40,7 @@ export function ScrollVideoHero() {
     if (!container || !v) return;
 
     let raf = 0;
-    let seeking = false;
-
-    const onSeeked = () => {
-      seeking = false;
-    };
+    let seekTimeout: ReturnType<typeof setTimeout> | null = null;
 
     const update = () => {
       const rect = container.getBoundingClientRect();
@@ -58,19 +54,22 @@ export function ScrollVideoHero() {
       if (!isActive) return;
 
       const dur = durationRef.current;
-      if (dur <= 0 || seeking) return;
+      if (dur <= 0) return;
 
       const nextTime = Math.max(0, Math.min(dur, p * dur));
-      if (Math.abs(nextTime - lastTimeRef.current) < 0.08) return;
-      if (Math.abs(v.currentTime - nextTime) < 0.08) return;
+      if (Math.abs(nextTime - lastTimeRef.current) < 0.05) return;
 
       lastTimeRef.current = nextTime;
-      seeking = true;
-      try {
-        v.currentTime = nextTime;
-      } catch {
-        seeking = false;
-      }
+      
+      // Clear any pending seek timeout
+      if (seekTimeout) clearTimeout(seekTimeout);
+      
+      // Use requestAnimationFrame for smoother seeking
+      seekTimeout = setTimeout(() => {
+        try {
+          v.currentTime = nextTime;
+        } catch {}
+      }, 16);
     };
 
     const onScroll = () => {
@@ -81,7 +80,6 @@ export function ScrollVideoHero() {
       });
     };
 
-    v.addEventListener("seeked", onSeeked);
     update();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
@@ -89,8 +87,8 @@ export function ScrollVideoHero() {
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
-      v.removeEventListener("seeked", onSeeked);
       if (raf) cancelAnimationFrame(raf);
+      if (seekTimeout) clearTimeout(seekTimeout);
     };
   }, []);
 
