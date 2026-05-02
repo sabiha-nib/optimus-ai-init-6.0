@@ -1,6 +1,6 @@
-# Perfect Merge
+# OPTIMUS AI
 
-A user experience showcase featuring three distinct visual experiences built with React, Vite, and Tailwind CSS.
+A user experience showcase featuring three distinct visual experiences built with React, Vite, and Tailwind CSS, created for INIT 6.0
 
 ---
 
@@ -12,7 +12,7 @@ This project is a collection of experimental UI designs exploring modern web int
 
 ## Pages
 
-### Home (Agentic)
+### Home 
 A minimalist, cream-toned landing experience featuring:
 - **Cinematic intro animation** with text reveal and fade-in sequencing
 - **Bento grid layout** with hover-reactive glow effects
@@ -21,7 +21,7 @@ A minimalist, cream-toned landing experience featuring:
 - **Stacking card animations** triggered by scroll position
 - **Smooth reveal text** that fades in word-by-word as you scroll
 
-### Deep Dive (PetalSphere)
+### Deep Dive 
 A nature-inspired, editorial-style page with:
 - **Full-bleed hero sections** with parallax imagery
 - **Chapter-based navigation** with scientific article formatting
